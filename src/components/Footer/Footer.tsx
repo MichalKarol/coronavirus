@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 export function Footer() {
   return (
     <footer className={styles.Footer}>
-      Stworzone&nbsp;przez&nbsp;
+      BY&nbsp;
       <a
         href="https://github.com/MichalKarol"
         target="blank"
@@ -24,7 +24,7 @@ export function Footer() {
         rel="nooperner noreferer"
         aria-label="poproś o zmianę"
       >
-        poproś o zmianę
+        zmiany
       </a>
     </footer>
   );

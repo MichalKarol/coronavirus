@@ -36,3 +36,19 @@
 .links {
   display: flex;
 }
+
+.MobileHeader {
+  display: none;
+}
+
+@media only screen and (max-width: max-mobile) {
+  .MobileHeader {
+    display: grid;
+  }
+}
+
+@media only screen and (max-width: max-mobile) {
+  .StandardHeader {
+    display: none;
+  }
+}

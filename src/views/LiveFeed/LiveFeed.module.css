@@ -32,7 +32,7 @@
 .TwitterContainer {
   grid-area: twitter;
   height: calc(80vh - 32px);
-  overflow-y: auto;
+  overflow-y: scroll;
   position: relative;
 }
 .TwitterContainerLoading {
