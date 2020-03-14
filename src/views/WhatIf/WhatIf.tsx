@@ -12,7 +12,7 @@ export function WhatIf() {
           name="description"
           content="Wskazówki dla osób poderzewających u siebie koronawirusa"
         />
-        <link rel="canonical" href="http://koronawiruswpl.pl/whatif" />
+        <link rel="canonical" href="https://koronawiruswpl.pl/whatif" />
       </Helmet>
       <h1>Co jeśli mam koronawirusa</h1>
       <section className={styles.Section}>

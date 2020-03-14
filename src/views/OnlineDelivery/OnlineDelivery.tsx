@@ -13,7 +13,7 @@ export function OnlineDelivery() {
           name="description"
           content="Lista stron i aplikacji zapewniajacych jedzenie lub zakupy z dowozem"
         />
-        <link rel="canonical" href="http://koronawiruswpl.pl/onlinedelivery" />
+        <link rel="canonical" href="https://koronawiruswpl.pl/onlinedelivery" />
       </Helmet>
       <h1>Zakupy i jedzenie z dowozem</h1>
       <div className={styles.OnlineDeliveryGrid}>

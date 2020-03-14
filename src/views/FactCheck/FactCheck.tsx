@@ -247,7 +247,7 @@ export function FactCheck() {
           name="description"
           content="Fakty i mity nt. koronawirusa"
         />
-        <link rel="canonical" href="http://koronawiruswpl.pl/factcheck" />
+        <link rel="canonical" href="https://koronawiruswpl.pl/factcheck" />
       </Helmet>
       <h1>Fakty i mity</h1>
       <div className={styles.FactCheckGrid}>

@@ -10,7 +10,7 @@ import Hostpitals from "../../assets/hospitals.json";
 import HeartSVG from "../../assets/heart.svg";
 import powiaty from "../../assets/powiaty.json";
 import { useTimer } from "../../hooks/use-timer";
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet";
 
 type Cases = {
   powiat: string;
@@ -35,7 +35,7 @@ export function LiveFeed() {
   >(null);
 
   function fetchData() {
-    fetch("/api/cases")
+    fetch("https://koronawiruswpl.pl/api/cases")
       .then(res => res.json())
       .then(res =>
         setDataState({
@@ -120,11 +120,8 @@ export function LiveFeed() {
       <Helmet>
         <title>Na żywo</title>
         <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="Podgląd sytuacji w Polsce na żywo"
-        />
-        <link rel="canonical" href="http://koronawiruswpl.pl/" />
+        <meta name="description" content="Podgląd sytuacji w Polsce na żywo" />
+        <link rel="canonical" href="https://koronawiruswpl.pl/" />
       </Helmet>
       <div className={styles.MapContainer}>
         <h2>

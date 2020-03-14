@@ -21,7 +21,7 @@ function App() {
       <title>Koronawirus w Polsce</title>
         <meta charSet="utf-8" />
         <meta name="description" content="Agregator informacji o koronawirusie w Polsce"/>
-        <link rel="canonical" href="http://koronawiruswpl.pl/" />
+        <link rel="canonical" href="https://koronawiruswpl.pl/" />
       </Helmet>
       <Router>
         <Header />
