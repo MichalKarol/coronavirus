@@ -1,0 +1,338 @@
+{
+  "date": "2020-03-13T01:00:00+0001",
+  "illpoints": [],
+  "hospitalpoints": [
+    {
+      "name": "Wałbrzych, Specjalistyczny szpital im. Dra Alfreda Sokołowskiego, ul. Batorego 4",
+      "coords": { "lat": 50.774777, "lng": 16.277523 }
+    },
+    {
+      "name": "Wrocław - Śródmieście, Uniwersytecki Szpital Kliniczny im. Jana Mikulicza-Radeckiego, Oddział Kliniczny Zakaźny Tytusa Chałubińskiego 2-2a (Oddział dziecięcy) Klinika Pediatrii i Chorób Infekcyjnych, ul. Chałubińskiego 2-2A",
+      "coords": { "lat": 51.1102087, "lng": 17.065353 }
+    },
+    {
+      "name": "Wrocław, Wojewódzki Szpital Specjalistyczny im. J.Gromkowskiego, ul. Koszarowa 5",
+      "coords": { "lat": 51.1420413, "lng": 17.0638945 }
+    },
+    {
+      "name": "Bolesławiec, Zespół Opieki Zdrowotnej, ul. Jeleniogórska 4",
+      "coords": { "lat": 51.2549497, "lng": 15.5648971 }
+    },
+    {
+      "name": "Biłgoraj, Arion Szpitale Sp. Z o.o., ul. Pojaska 5",
+      "coords": { "lat": 50.52931, "lng": 22.7115 }
+    },
+    {
+      "name": "Lublin, Samodzielny Nr.1, ul. Staszica 16",
+      "coords": { "lat": 51.2508897, "lng": 22.5615151 }
+    },
+    {
+      "name": "Lublin, Samodzielny Publiczny Szpital Wojewódzki im. Jana Bożego, ul. Mieczysława Biernackiego 9",
+      "coords": { "lat": 51.2562582, "lng": 22.5646382 }
+    },
+    {
+      "name": "Chełm, Samodzielny Publiczny Wojewódzki Szpital Specjalistyczny, ul. Szpitalna 53b/Paw.B",
+      "coords": { "lat": 51.1492903, "lng": 23.454411 }
+    },
+    {
+      "name": "Łuków, Samodzielny Publiczny Zakład Opieki Zdrowotnej, ul. Dr. Andrzeja Rogalińskiego 3",
+      "coords": { "lat": 51.9245734, "lng": 22.3768496 }
+    },
+    {
+      "name": "Puławy, Samodzielny Publiczny Zakład Opieki Zdrowotnej, ul. Józefa Bema 1",
+      "coords": { "lat": 50.4430734, "lng": 23.4138542 }
+    },
+    {
+      "name": "Tomaszów Lubelski, Samodzielny Publiczny Zespół Opieki Zdrowotnej, Al. Grunwaldzkie 1",
+      "coords": { "lat": 50.4430734, "lng": 23.4138542 }
+    },
+    {
+      "name": "Biała Podlaska, Wojewódzki Szpital Specjalistyczny, ul. Terebelska 57-65",
+      "coords": { "lat": 52.0466975, "lng": 23.1095295 }
+    },
+    {
+      "name": "Radomsko, Szpital Powiatowy, ul. Jagiellońska 36",
+      "coords": { "lat": 51.0575348, "lng": 19.4565287 }
+    },
+    {
+      "name": "Bełchatów, Szpital Wojewódzki im. Jana Pawła II, ul. Czapliniecka 123",
+      "coords": { "lat": 51.3749983, "lng": 19.3481403 }
+    },
+    {
+      "name": "Tomaszów Mazowiecki, Tomaszowskie Centrum Zdrowia, ul. Jana Pawła II 35",
+      "coords": { "lat": 51.5230087, "lng": 20.0028224 }
+    },
+    {
+      "name": "Łódź - Bałuty, Wojewódzki Specjalistyczny Szpital Im. Dr Wł. Biegańskiego, Oddział Chorób Zakaźnych I Przewodu Pokarmowego, Klinika Chorób Zakaźnych I Chorób Wątroby UM, Oddział Chorób Zakaźnych, Tropikalnych I Pasożytniczych dla dorosłych, Klinika Chorób Zakaźnych I Hepatologii UM, Oddział Chorób Zakaźnych, Tropikalnych I Pasożytniczych dla dzieci, Klinika Chorób Zakaźnych Dzieci UM w Łodzi, Oddział Obserwacyjno-Zakaźny I Chorób Wątroby, ul. Kniaziewicza 1/5",
+      "coords": { "lat": 51.8005496, "lng": 19.4354739 }
+    },
+    {
+      "name": "Kraków, Samodzielny Publiczny Zakład Opieki Zdrowotnej – Szpital Uniwersytecki, ul. Macieja Jakubowskiego 2",
+      "coords": { "lat": 50.0096881, "lng": 19.9986051 }
+    },
+    {
+      "name": "Kraków, Szpital Specjalistyczny im. Stefana Żeromskiego, Samodzielny Publiczny Zakład Opieki Zdrowotnej, os. Na Skarpie 66",
+      "coords": { "lat": 50.0657534, "lng": 20.0444243 }
+    },
+    {
+      "name": "Kraków, Szpital Specjalistyczny im. Jana Pawła II, Oddział Chorób Infekcyjnych Dzieci i Hepatologii Dziecięcej, ul. Prądnicka 80",
+      "coords": { "lat": 50.0907489, "lng": 19.9312967 }
+    },
+    {
+      "name": "Olkusz, Nowy Szpital w Olkuszu Sp. Z o.o., ul. 1000-Lecia 13",
+      "coords": { "lat": 50.2689797, "lng": 19.5664572 }
+    },
+    {
+      "name": "Myślenice, Samodzielny Publiczny Zakład Opieki Zdrowotnej, ul. Mikołaja Kopernika 13",
+      "coords": { "lat": 50.1856141, "lng": 20.2968594 }
+    },
+    {
+      "name": "Tarnów, Specjalistyczny Szpital im. E. Szczeklika, ul. Szpitalna 13",
+      "coords": { "lat": 50.0173553, "lng": 20.9926082 }
+    },
+    {
+      "name": "Wielogłowy, Szpital Specjalistyczny im. Jędrzeja Śniadeckiego w Nowym Sączu, ul. Dąbrowa 1",
+      "coords": { "lat": 49.6493795, "lng": 20.6558359 }
+    },
+    {
+      "name": "Miechów, Szpital Św. Anny, ul. Szpitalna 3",
+      "coords": { "lat": 50.3534479, "lng": 20.032641 }
+    },
+    {
+      "name": "Dąbrowa Tarnowska, Zespół Opieki Zdrowotnej, ul. Szpitalna 1",
+      "coords": { "lat": 50.1769835, "lng": 20.9733225 }
+    },
+    {
+      "name": "Proszowice, Samodzielny Publiczny Zespół Opieki Zdrowotnej w Proszowicach, ul. Kopernika 13",
+      "coords": { "lat": 50.1856141, "lng": 20.2968594 }
+    },
+    {
+      "name": "Ostrołęka, Mazowiecki Szpital Specjalistyczny im. Dr. Józef Psarskiego, al. Jana Pawła II 120A",
+      "coords": { "lat": 53.0631222, "lng": 21.5875083 }
+    },
+    {
+      "name": "Radom, Radomski Szpital Specjalistyczny im. Dr. Tytusa Chałubińskiego, ul. Tochtermana 1",
+      "coords": { "lat": 51.3998061, "lng": 21.1436827 }
+    },
+    {
+      "name": "Siedlce, Samodzielny Publiczny Zakład Opieki Zdrowotnej ul. Starowiejska 15",
+      "coords": { "lat": 52.1657222, "lng": 22.2598498 }
+    },
+    {
+      "name": "Kozienice, Samodzielny Publiczny Zespół Zakładów Opieki Zdrowotnej, Al. W. Sikorskiego 10",
+      "coords": { "lat": 51.5917263, "lng": 21.5228474 }
+    },
+    {
+      "name": "Ciechanów, Specjalistyczny Szpital Wojewódzki, ul. Powstańców Wielkopolskich 2",
+      "coords": { "lat": 52.8836618, "lng": 20.6331413 }
+    },
+    {
+      "name": "Warszawa, Wojewódzki Szpital Zakaźny, ul. Wolska 37",
+      "coords": { "lat": 52.2344219, "lng": 20.9697414 }
+    },
+    {
+      "name": "Warszawa, Wojskowy Instytut Medyczny, ul. Szaserów 128",
+      "coords": { "lat": 52.251098, "lng": 21.0863364 }
+    },
+    {
+      "name": "Warszawa, Centralny Szpital Kliniczny MSWiA, ul. Wołoska 137",
+      "coords": { "lat": 52.1988978, "lng": 20.995348 }
+    },
+    {
+      "name": "Płock, Wojewódzki Szpital Zespolony, ul. Medyczna 19",
+      "coords": { "lat": 52.5569322, "lng": 19.6517864 }
+    },
+    {
+      "name": "Warszawa – Ochota, Uniwersyteckie Centrum Kliniczne Warszawskiego Uniwersytetu Medycznego - Dziecięcy Szpital Kliniczny im. Józefa Polikarpa Brudzińskiego w Warszawie, Oddział Kliniczny Obserwacyjno - Izolacyjny i Pediatrii, ul. Żwirki i Wigury 63A",
+      "coords": { "lat": 52.2072912, "lng": 20.9816928 }
+    },
+    {
+      "name": "Łańcut, Centrum Medyczne w Łańcucie Sp. z o. o., ul. Ignacego Paderewskiego 5",
+      "coords": { "lat": 50.0662928, "lng": 22.230842 }
+    },
+    {
+      "name": "Jarosław, Centrum Opieki Medycznej, ul. 3 Maja 70",
+      "coords": { "lat": 50.0128809, "lng": 22.6912277 }
+    },
+    {
+      "name": "Sanok, Samodzielny Publiczny Zespół Opieki Zdrowotnej, ul. 800-lecia 26",
+      "coords": { "lat": 49.551918, "lng": 22.1965959 }
+    },
+    {
+      "name": "Mielec, Szpital Specjalistyczny im. Edmunda Biernackiego, ul. Żeromskiego 22",
+      "coords": { "lat": 50.2882518, "lng": 21.435163 }
+    },
+    {
+      "name": "Jasło, Szpital Specjalistyczny, ul. Lwowska 22",
+      "coords": { "lat": 49.7520528, "lng": 21.47826 }
+    },
+    {
+      "name": "Przemyśl, Wojewódzki Szpital im. Św. Ojca Pio, ul. Rogozińskiego 30",
+      "coords": { "lat": 49.7945821, "lng": 22.7586293 }
+    },
+    {
+      "name": "Dębica, Zespół Opieki Zdrowotnej, ul. Krakowska 91",
+      "coords": { "lat": 50.038926, "lng": 21.3910343 }
+    },
+    {
+      "name": "Augustów, Samodzielny Publiczny Zakład Opieki Zdrowotnej w Augustowie, ul. Szpitalna 12",
+      "coords": { "lat": 53.8515201, "lng": 22.9912613 }
+    },
+    {
+      "name": "Bielsk Podlaski, Samodzielny Publiczny Zakład Opieki Zdrowotnej w Bielsku Podlaskim, ul. Kleszczelowskiego 1",
+      "coords": { "lat": 52.7594372, "lng": 23.2004387 }
+    },
+    {
+      "name": "Hajnówka, Samodzielny Publiczny Zakład Opieki Zdrowotnej w Hajnówce, ul. Doc. Adama Dowgirda 9",
+      "coords": { "lat": 52.7465471, "lng": 23.6081163 }
+    },
+    {
+      "name": "Grajewo, Szpital Ogólny im. dr Witolda Ginela, ul. Konstytucji 3 Maja 34",
+      "coords": { "lat": 53.6458182, "lng": 22.4679109 }
+    },
+    {
+      "name": "Suwałki, Szpital Wojewódzki im. dr Ludwika Rydygiera, ul. Szpitalna 60",
+      "coords": { "lat": 54.1195172, "lng": 22.9232023 }
+    },
+    {
+      "name": "Łomża, Szpital Wojewódzki im. Kardynała Stefana Wyszyńskiego, Al. Marsz. Józefa Piłsudskiego 11",
+      "coords": { "lat": 53.1601647, "lng": 22.0832792 }
+    },
+    {
+      "name": "Białystok, Uniwersytecki Dziecięcy Szpital Kliniczny im. L. Zamenhofa, ul. Waszyngtona 17",
+      "coords": { "lat": 53.1239607, "lng": 23.1536215 }
+    },
+    {
+      "name": "Białystok, Uniwersytecki Szpital Kliniczny, ul. Żurawia 14",
+      "coords": { "lat": 53.1088228, "lng": 23.1883329 }
+    },
+    {
+      "name": "Gdynia, Uniwersyteckie Centrum Medycyny Morskiej i Tropikalnej, ul. Powstania Styczniowego 9B",
+      "coords": { "lat": 54.4879198, "lng": 18.5463725 }
+    },
+    {
+      "name": "Gdańsk, Pomorskie Centrum Chorób Zakaźnych i Gruźlicy, ul. Mariana Smoluchowskiego 18",
+      "coords": { "lat": 54.3642417, "lng": 18.6147398 }
+    },
+    {
+      "name": "Tychy, Megrez Sp. z o. o., ul. Edukacji 102",
+      "coords": { "lat": 50.1138543, "lng": 19.0054432 }
+    },
+    {
+      "name": "Zawiercie, Szpital Powiatowy, ul. Miodowa 14",
+      "coords": { "lat": 50.4817507, "lng": 19.406662 }
+    },
+    {
+      "name": "Racibórz, Szpital Rejonowy im. dr Józefa Rostka, ul. Gamowska 3",
+      "coords": { "lat": 50.1013484, "lng": 18.2012558 }
+    },
+    {
+      "name": "Bytom, Szpital Specjalistyczny nr 1, al. Legionów 49",
+      "coords": { "lat": 50.3536185, "lng": 18.9098739 }
+    },
+    {
+      "name": "Chorzów, Szpital Specjalistyczny, ul. Zjednoczenia 10",
+      "coords": { "lat": 50.2919009, "lng": 18.9509421 }
+    },
+    {
+      "name": "Częstochowa, Wojewódzki Szpital Specjalistyczny im. N.M.P., ul. Polskiego Czerwonego Krzyża 7",
+      "coords": { "lat": 50.8301232, "lng": 19.1090531 }
+    },
+    {
+      "name": "Cieszyn, Zespół Zakładów Opieki Zdrowotnej, ul. Bielska 4",
+      "coords": { "lat": 49.7446991, "lng": 18.6390801 }
+    },
+    {
+      "name": "Poznań, Specjalistyczny Zespół Opieki Zdrowotnej nad Matką i Dzieckiem, ul. Nowowiejskiego 56/58",
+      "coords": { "lat": 52.41507, "lng": 16.9180938 }
+    },
+    {
+      "name": "Poznań, Szpital kliniczny im. Karola Jonschera Uniwersytetu Medycznego im. Karola Marcinkowskiego, ul. Szpitalna 27/33",
+      "coords": { "lat": 52.4120404, "lng": 16.8755908 }
+    },
+    {
+      "name": "Poznań, Wielospecjalistyczny Szpital Miejski im. Józefa Strusia z Zakładem Opiekuńczo-Leczniczym. Samodzielny Publiczny Zakład Opieki Zdrowotnej z siedzibą w Poznaniu, ul. Szwajcarska 3",
+      "coords": { "lat": 52.3897698, "lng": 16.9937794 }
+    },
+    {
+      "name": "Konin, Wojewódzki Szpital Zespolony im. dr Romana Ostrzyckiego, ul. Szpitalna 45",
+      "coords": { "lat": 52.2109753, "lng": 18.2339449 }
+    },
+    {
+      "name": "Kalisz, Wojewódzki Szpital Zespolony im. Ludwika Perzyny, ul. Toruńska 7",
+      "coords": { "lat": 51.7671114, "lng": 18.0748168 }
+    },
+    {
+      "name": "Wałcz, 107 Szpital Wojskowy z Przychodnią Samodzielny Publiczny Zakład Opieki Zdrowotnej, ul. Kołobrzeska 44",
+      "coords": { "lat": 51.7671114, "lng": 18.0748168 }
+    },
+    {
+      "name": "Szczecin, Samodzielny Publiczny Wojewódzki Szpital Zespolony , Oddział Chorób Zakaźnych, Hepatologii I Transplantacji Wątroby I Oddział Obserwacyjno-Zakaźny, Chorób Tropikalnych i Nabytych Niedoborów Immunologicznych, oraz Oddział dziecięcy zakaźny, ul. Arkońska 4",
+      "coords": { "lat": 53.4526772, "lng": 14.5242313 }
+    },
+    {
+      "name": "Koszalin, Szpital Wojewódzki im. Mikołaja Kopernika, ul. Chałubińskiego 7",
+      "coords": { "lat": 54.1980957, "lng": 16.2116592 }
+    },
+    {
+      "name": "Zielona Góra, Szpital Uniwersytecki im. Karola Marcinkowskiego Sp. Z o.o., ul. Zyty 26",
+      "coords": { "lat": 51.9408773, "lng": 15.5176384 }
+    },
+    {
+      "name": "Giżycko, „Szpital Giżycki” Sp. z o. o., ul. Warszawska 41",
+      "coords": { "lat": 54.0378032, "lng": 21.7803165 }
+    },
+    {
+      "name": "Pisz, Samodzielny Publiczny Zakład Opieki Zdrowotnej Szpital Powiatowy, ul. Sienkiewicza 2",
+      "coords": { "lat": 53.6260252, "lng": 21.7973363 }
+    },
+    {
+      "name": "Ostróda, Szpital w Ostródzie S.A., ul. Jagiełły 1",
+      "coords": { "lat": 53.6930554, "lng": 19.9729197 }
+    },
+    {
+      "name": "Elbląg, Szpital miejski św. Jana Pawła, ul. Żeromskiego 22",
+      "coords": { "lat": 54.1573204, "lng": 19.4199014 }
+    },
+    {
+      "name": "Olsztyn, Wojewódzki Specjalistyczny Szpital Dziecięcy im. prof. dr Stanisława Popowskiego, ul. Żołnierska 18A",
+      "coords": { "lat": 53.768091, "lng": 20.4932177 }
+    },
+    {
+      "name": "Opole, Szpital Wojewódzki w Opolu Sp. Z o.o., ul. Kośnego 53",
+      "coords": { "lat": 50.6707577, "lng": 17.9340573 }
+    },
+    {
+      "name": "Nysa, Oddział Obserwacyjno-Zakaźny, Zespół Opieki Zdrowotnej, ul. Bohaterów Warszawy 23",
+      "coords": { "lat": 50.4712262, "lng": 17.3267361 }
+    },
+    {
+      "name": "Starachowice, Powiatowy Zakład Opieki Zdrowotnej, ul. Radomska 70",
+      "coords": { "lat": 51.0647417, "lng": 21.0705006 }
+    },
+    {
+      "name": "Kielce, Wojewódzki Szpital Zespolony, ul. Radiowa 7, Oddział Zakaźny Dziecięcy, ul. Grunwaldzka 45",
+      "coords": { "lat": 50.8737346, "lng": 20.5989982 }
+    },
+    {
+      "name": "Busko-Zdrój, Zespół Opieki Zdrowotnej, ul. Bohaterów Warszawy 67",
+      "coords": { "lat": 50.4678862, "lng": 20.7017455 }
+    },
+    {
+      "name": "Kielce, Świętokrzyskie Centrum Pediatrii działające przy Szpitalu Zespolonym w Kielcach, ul. Grunwaldzka 25",
+      "coords": { "lat": 50.8734875, "lng": 20.5982205 }
+    },
+    {
+      "name": "Bydgoszcz, Wojewódzki Szpital Obserwacyjno-Zakaźny im. Tadeusza Browicza, ul. Św. Floriana 12",
+      "coords": { "lat": 53.1221362, "lng": 18.0070163 }
+    },
+    {
+      "name": "Toruń, Wojewódzki Szpital Zespolony im. L. Rydygiera, ul. Krasińskiego 4/4a",
+      "coords": { "lat": 53.0194989, "lng": 18.5795196 }
+    },
+    {
+      "name": "Świecie, NZOZ „Nowy Szpital Sp. Z o.o.” Prowadzony przez Nowy Szpital Sp. Z o.o., ul. Wojska Polskiego 126",
+      "coords": { "lat": 53.4137814, "lng": 18.4645898 }
+    }
+  ]
+}

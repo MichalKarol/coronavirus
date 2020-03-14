@@ -1,0 +1,19 @@
+@value colors: "../../colors.css";
+@value flag-red-color from colors;
+
+.Footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: flag-red-color;
+}
+
+.Footer a {
+  color: white;
+}

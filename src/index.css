@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: square;
+}
+
+a {
+  color: inherit;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
