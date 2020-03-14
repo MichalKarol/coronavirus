@@ -14,7 +14,7 @@ export function Header() {
             activeClassName={styles.active}
             aria-label="Na żywo"
           >
-            Na żywo
+            <div>Na żywo</div>
           </NavLink>
           <NavLink
             to="/whatif"
@@ -22,7 +22,7 @@ export function Header() {
             activeClassName={styles.active}
             aria-label="Co jeśli mam koronawirusa"
           >
-            Co jeśli mam koronawirusa
+            <div>Co jeśli mam koronawirusa</div>
           </NavLink>
           <NavLink
             to="/factcheck"
@@ -30,7 +30,7 @@ export function Header() {
             activeClassName={styles.active}
             aria-label="Fakty i mity"
           >
-            Fakty i mity
+            <div>Fakty i mity</div>
           </NavLink>
           <NavLink
             to="/onlinedelivery"
@@ -38,7 +38,7 @@ export function Header() {
             activeClassName={styles.active}
             aria-label="Zakupy i jedzenie na dowóz"
           >
-            Zakupy i jedzenie na dowóz
+            <div>Zakupy i jedzenie na dowóz</div>
           </NavLink>
         </nav>
       </div>

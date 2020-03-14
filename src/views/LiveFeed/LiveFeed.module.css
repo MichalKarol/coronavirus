@@ -32,6 +32,18 @@
 .TwitterContainer {
   grid-area: twitter;
   height: calc(80vh - 32px);
-
-  overflow-y: scroll;
+  overflow-y: auto;
+  position: relative;
+}
+.TwitterContainerLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.TwitterContainerTimeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

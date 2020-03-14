@@ -93,7 +93,8 @@ export function LiveFeed() {
         return {
           color: level.color,
           opacity: 0.2,
-          fillColor: level.color
+          fillColor: level.color,
+          fillOpacity: 0.5
         };
       }
     }
@@ -136,9 +137,13 @@ export function LiveFeed() {
           className={styles.MapElement}
         >
           <TileLayer
-            url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-            attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
+            attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> 
+                          © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> 
+                          <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank" rel="noreferer noopener">
+                          Improve this map</a></strong>'
             id="mapbox.light"
+            accessToken="pk.eyJ1IjoibWthcm9sIiwiYSI6ImNqazl4ODMxMDJ3OTEzd2xlbnN6OHRlMTgifQ.I_mm4Sc8fkKJaFpQc8BWjg"
           ></TileLayer>
           {dataState.tag === "loaded" && (
             <GeoJSON
@@ -172,15 +177,18 @@ export function LiveFeed() {
         </LMap>
       </div>
       <div className={styles.TwitterContainer}>
-        <TwitterTimelineEmbed
-          sourceType="list"
-          ownerScreenName="MichalPKarol"
-          slug="koronawirus"
-          theme={"dark"}
-          noHeader={true}
-          noFooter={true}
-          noBorders={true}
-        />
+        <div className={styles.TwitterContainerLoading}>Loading</div>
+        <div className={styles.TwitterContainerTimeline}>
+          <TwitterTimelineEmbed
+            sourceType="list"
+            ownerScreenName="MichalPKarol"
+            slug="koronawirus"
+            theme={"dark"}
+            noHeader={true}
+            noFooter={true}
+            noBorders={true}
+          />
+        </div>
       </div>
     </div>
   );

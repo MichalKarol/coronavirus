@@ -9,7 +9,7 @@
 
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10vh minmax(80vh, auto) 10vh;
+  grid-template-rows: minmax(10vh, auto) minmax(80vh, auto) 10vh;
   grid-template-areas:
     "header"
     "content"
