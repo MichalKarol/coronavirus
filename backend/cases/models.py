@@ -6,13 +6,15 @@ class Updates(models.Model):
 
 
 class Cases(models.Model):
-    powiat = models.CharField(max_length=150, primary_key=True)
+    wojewodztwo = models.CharField(max_length=150)
+    powiat = models.CharField(max_length=150)
     sick = models.IntegerField()
     deaths = models.IntegerField()
 
 
 class HistoryCases(models.Model):
     date = models.DateTimeField()
+    wojewodztwo = models.CharField(max_length=150)
     powiat = models.CharField(max_length=150)
     sick = models.IntegerField()
     deaths = models.IntegerField()

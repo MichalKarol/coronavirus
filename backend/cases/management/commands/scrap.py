@@ -18,16 +18,22 @@ class Command(BaseCommand):
         csv_data = json.loads(soup.find(id="registerData").string).get("data")
         lines = csv_data.split("\r\n")
 
+        cases = []
         for line in lines[1:-1]:
             parts = line.split(";")
             if len(parts) == 5:
-                Cases.objects.update_or_create(
-                    powiat=parts[1],
-                    defaults={
-                        "sick": int(parts[2]) if parts[2] else 0,
-                        "deaths": int(parts[3]) if parts[3] else 0,
-                    },
+                if parts[0] == "Cała Polska":
+                    continue
+                cases.append(
+                    Cases(
+                        wojewodztwo=parts[0],
+                        powiat=parts[1],
+                        sick=int(parts[2]) if parts[2] else 0,
+                        deaths=int(parts[3]) if parts[3] else 0,
+                    )
                 )
+        Cases.objects.all().delete()
+        Cases.objects.bulk_create(cases)
 
         last_update = Updates.objects.order_by("-date").first()
         current_datetime = datetime.datetime.now()
@@ -40,6 +46,8 @@ class Command(BaseCommand):
             for line in lines[1:-1]:
                 parts = line.split(";")
                 if len(parts) == 5:
+                    if parts[0] == "Cała Polska":
+                        continue
                     history_cases.append(
                         HistoryCases(
                             date=current_datetime,

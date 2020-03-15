@@ -9,7 +9,7 @@ from django.db.models import Sum
 class HistoryCasesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = HistoryCases
-        fields = ["date", "powiat", "sick", "deaths"]
+        fields = ["date", "wojewodztwo", "powiat", "sick", "deaths"]
 
 
 class HistoryCasesViewSet(viewsets.ReadOnlyModelViewSet):
@@ -23,6 +23,8 @@ def CasesViewSet(request):
             "updated": Updates.objects.order_by("-date").first().date,
             "sick": Cases.objects.aggregate(sum=Sum("sick"))["sum"],
             "deaths": Cases.objects.aggregate(sum=Sum("deaths"))["sum"],
-            "cases": list(Cases.objects.all().values("powiat", "sick", "deaths")),
+            "cases": list(
+                Cases.objects.all().values("wojewodztwo", "powiat", "sick", "deaths")
+            ),
         }
     )
