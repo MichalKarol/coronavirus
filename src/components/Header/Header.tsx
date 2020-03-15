@@ -5,38 +5,40 @@ import { ReactComponent as MenuSVG } from "../../assets/menu.svg";
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const links = [
+    { name: "Na żywo", mobileName: "Live", url: "/" },
+    {
+      name: "Co jeśli mam koronawirusa",
+      mobileName: "Co jeśli?",
+      url: "/whatif"
+    },
+    { name: "Poza granicami", mobileName: "Poza granicami", url: "/travel" },
+    { name: "Fakty i mity", mobileName: "Fakty i mity", url: "/factcheck" },
+    {
+      name: "Zakupy i jedzenie na dowóz",
+      mobileName: "Dowóz",
+      url: "/onlinedelivery"
+    }
+  ];
+
   return (
     <header className={styles.Header}>
       <div className={styles.MobileHeader}>
         <nav className={styles.links}>
-          <NavLink
-            to="/"
-            exact
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Na żywo"
-            onClick={() => setMenuOpen(false)}
-          >
-            <div>Live</div>
-          </NavLink>
-          <NavLink
-            to="/whatif"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Co jeśli mam koronawirusa"
-            onClick={() => setMenuOpen(false)}
-          >
-            <div>Co jeśli?</div>
-          </NavLink>
-          <NavLink
-            to="/onlinedelivery"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Poza granicami"
-            onClick={() => setMenuOpen(false)}
-          >
-            <div>Poza granicami</div>
-          </NavLink>
+          {links.slice(0, 3).map(link => (
+            <NavLink
+              key={link.url}
+              to={link.url}
+              exact={link.url === "/" ? true : undefined}
+              className={styles.navitem}
+              activeClassName={styles.active}
+              aria-label={link.mobileName}
+              onClick={() => setMenuOpen(false)}
+            >
+              <div>{link.mobileName}</div>
+            </NavLink>
+          ))}
           <button
             className={styles.MobileMenuButton}
             onClick={() => setMenuOpen(s => !s)}
@@ -45,71 +47,37 @@ export function Header() {
           </button>
           {isMenuOpen && (
             <div className={styles.MobileMenu}>
-              <NavLink
-                to="/factcheck"
-                className={styles.navitem}
-                activeClassName={styles.active}
-                aria-label="Fakty i mity"
-                onClick={() => setMenuOpen(false)}
-              >
-                <div>Fakty&nbsp;i mity</div>
-              </NavLink>
-              <NavLink
-                to="/onlinedelivery"
-                className={styles.navitem}
-                activeClassName={styles.active}
-                aria-label="Zakupy i jedzenie na dowóz"
-                onClick={() => setMenuOpen(false)}
-              >
-                <div>Dowóz</div>
-              </NavLink>
+              {links.slice(3, links.length).map(link => (
+                <NavLink
+                  key={link.url}
+                  to={link.url}
+                  exact={link.url === "/" ? true : undefined}
+                  className={styles.navitem}
+                  activeClassName={styles.active}
+                  aria-label={link.mobileName}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <div>{link.mobileName}</div>
+                </NavLink>
+              ))}
             </div>
           )}
         </nav>
       </div>
       <div className={styles.StandardHeader}>
         <nav className={styles.links}>
-          <NavLink
-            to="/"
-            exact
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Na żywo"
-          >
-            <div>Na żywo</div>
-          </NavLink>
-          <NavLink
-            to="/whatif"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Co jeśli mam koronawirusa"
-          >
-            <div>Co jeśli mam koronawirusa</div>
-          </NavLink>
-          <NavLink
-            to="/travel"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Poza granicami"
-          >
-            <div>Poza granicami</div>
-          </NavLink>
-          <NavLink
-            to="/factcheck"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Fakty i mity"
-          >
-            <div>Fakty i mity</div>
-          </NavLink>
-          <NavLink
-            to="/onlinedelivery"
-            className={styles.navitem}
-            activeClassName={styles.active}
-            aria-label="Zakupy i jedzenie na dowóz"
-          >
-            <div>Zakupy i jedzenie na dowóz</div>
-          </NavLink>
+          {links.map(link => (
+            <NavLink
+              key={link.url}
+              to={link.url}
+              exact={link.url === "/" ? true : undefined}
+              className={styles.navitem}
+              activeClassName={styles.active}
+              aria-label={link.name}
+            >
+              <div>{link.name}</div>
+            </NavLink>
+          ))}
         </nav>
       </div>
     </header>
