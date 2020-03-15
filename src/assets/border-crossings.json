@@ -1,0 +1,125 @@
+{
+  "date": "2020-03-15T01:00:00+0001",
+  "crossings": [
+    {
+      "name": "Przejście graniczne Cieszyn – Český Tĕšín (Most Przyjaźni) (pieszy)",
+      "coords": { "lat": 49.7477852, "lng": 18.6268531 }
+    },
+    {
+      "name": "Przejście graniczne Cieszyn – Chotĕbuz",
+      "coords": { "lat": 49.763344, "lng": 18.61306 }
+    },
+    {
+      "name": "Przejście graniczne Gorzyczki",
+      "coords": { "lat": 49.93631, "lng": 18.407078 }
+    },
+    {
+      "name": "Przejście graniczne Nowe Chałupki",
+      "coords": { "lat": 49.916748, "lng": 18.322955 }
+    },
+    {
+      "name": "Przejście graniczne Trzebina",
+      "coords": { "lat": 50.2808186, "lng": 17.5891665 }
+    },
+    {
+      "name": "Przejście graniczne Kudowa – Słone",
+      "coords": { "lat": 50.430499, "lng": 16.1989482 }
+    },
+    {
+      "name": "Przejście graniczne Jakuszyce",
+      "coords": { "lat": 50.8069837, "lng": 15.42371 }
+    },
+    {
+      "name": "Przejście graniczne Jędrzychowice",
+      "coords": { "lat": 51.1843612, "lng": 15.0071755 }
+    },
+    {
+      "name": "Przejście graniczne Olszyna – Forst",
+      "coords": { "lat": 51.666748, "lng": 14.752691 }
+    },
+    {
+      "name": "Przejście graniczne Gubin – Guben",
+      "coords": { "lat": 51.9034709, "lng": 14.6944119 }
+    },
+    {
+      "name": "Przejście graniczne Świecko – Frankfurt",
+      "coords": { "lat": 52.3167442, "lng": 14.5745368 }
+    },
+    {
+      "name": "Przejście graniczne Słubice – Frankfurt",
+      "coords": { "lat": 52.3478996, "lng": 14.5531874 }
+    },
+    {
+      "name": "Przejście graniczne Kostrzyn nad Odrą – Kietz (pieszy)",
+      "coords": { "lat": 52.5838763, "lng": 14.6274919 }
+    },
+    {
+      "name": "Przejście graniczne Krajnik Dolny – Schwedt",
+      "coords": { "lat": 53.0320845, "lng": 14.3054766 }
+    },
+    {
+      "name": "Przejście graniczne Kołbaskowo – Pomellen",
+      "coords": { "lat": 53.306885, "lng": 14.409077 }
+    },
+    {
+      "name": "Przejście graniczne Świnoujście – Garz",
+      "coords": { "lat": 53.8911776, "lng": 14.2108186 }
+    },
+    {
+      "name": "Przejście graniczne Zgorzelec (pieszy)",
+      "coords": { "lat": 51.1516134, "lng": 15.0004736 }
+    },
+    {
+      "name": "Przejście graniczne Budzisko",
+      "coords": { "lat": 54.3098583, "lng": 23.1137197 }
+    },
+    {
+      "name": "Przejście graniczne Barwinek",
+      "coords": { "lat": 49.4166832, "lng": 21.6965195 }
+    },
+    {
+      "name": "Przejście graniczne Chyżne",
+      "coords": { "lat": 49.4262699, "lng": 19.6426647 }
+    },
+    {
+      "name": "Przejście graniczne Gołdap - Gusiew",
+      "coords": { "lat": 54.3412363, "lng": 22.2957756 }
+    },
+    {
+      "name": "Przejście graniczne Gronowo - Mamonowo",
+      "coords": { "lat": 54.4333892, "lng": 19.8937461 }
+    },
+    {
+      "name": "Przejście graniczne Białowieża - Piererow",
+      "coords": { "lat": 52.6686078, "lng": 23.8560444 }
+    },
+    {
+      "name": "Przejście graniczne Sławatycze - Domaczewo",
+      "coords": { "lat": 51.7672465, "lng": 23.5843214 }
+    },
+    {
+      "name": "Przejście graniczne Połowce - Pieszczatka",
+      "coords": { "lat": 52.4749358, "lng": 23.3547007 }
+    },
+    {
+      "name": "Przejście graniczne Zosin - Ustiług",
+      "coords": { "lat": 50.8589485, "lng": 24.132451 }
+    },
+    {
+      "name": "Przejście graniczne Dołhobyczów - Uhrynów",
+      "coords": { "lat": 50.5783308, "lng": 24.0814914 }
+    },
+    {
+      "name": "Przejście graniczne Budomierz - Hruszew",
+      "coords": { "lat": 50.0963394, "lng": 23.2752631 }
+    },
+    {
+      "name": "Przejście graniczne Medyka - Szeginie",
+      "coords": { "lat": 49.799759, "lng": 22.9466964 }
+    },
+    {
+      "name": "Przejście graniczne Krościenko - Smolnica",
+      "coords": { "lat": 49.4737372, "lng": 22.6591048 }
+    }
+  ]
+}

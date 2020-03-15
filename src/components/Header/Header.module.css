@@ -1,6 +1,9 @@
 @value breakpoints: "../../breakpoints.css";
 @value max-mobile from breakpoints;
 
+@value colors: "../../colors.css";
+@value base-background from colors;
+
 .Header {
   grid-area: header;
   display: flex;
@@ -8,6 +11,7 @@
   justify-content: center;
   color: white;
   border-bottom: 1px solid black;
+  position: relative;
 }
 .navitem {
   composes: lato from "../../index.css";
@@ -39,6 +43,37 @@
 
 .MobileHeader {
   display: none;
+}
+
+.MobileMenu {
+  display: flex;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.MobileMenu a {
+  background-color: base-background;
+  border-bottom: 2px solid white;
+  margin: 0;
+  z-index: 10;
+}
+
+.MobileMenu a div {
+  width: fit-content;
+}
+
+.MobileMenu a:last-of-type {
+  border-bottom: 3px solid white;
+  margin-bottom: 4px;
+}
+
+.MobileMenuButton {
+  color: white;
+  background: none;
+  border: none;
 }
 
 @media only screen and (max-width: max-mobile) {

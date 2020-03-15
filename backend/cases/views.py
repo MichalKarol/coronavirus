@@ -3,9 +3,7 @@ from django.conf.urls import url, include
 from rest_framework import routers, serializers, viewsets
 from cases.models import HistoryCases, Cases, Updates
 from django.http import JsonResponse
-
-
-# Create your views here.
+from django.db.models import Sum
 
 
 class HistoryCasesSerializer(serializers.HyperlinkedModelSerializer):
@@ -23,6 +21,8 @@ def CasesViewSet(request):
     return JsonResponse(
         {
             "updated": Updates.objects.order_by("-date").first().date,
+            "sick": Cases.objects.aggregate(sum=Sum("sick"))["sum"],
+            "deaths": Cases.objects.aggregate(sum=Sum("deaths"))["sum"],
             "cases": list(Cases.objects.all().values("powiat", "sick", "deaths")),
         }
     )

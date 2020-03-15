@@ -1,5 +1,7 @@
 @value breakpoints: "../../breakpoints.css";
 @value max-mobile from breakpoints;
+@value colors: "../../colors.css";
+@value info-sick, info-deaths from colors;
 
 .LiveFeed {
   display: grid;
@@ -46,4 +48,22 @@
   top: 0;
   left: 0;
   width: 100%;
+}
+.MapInfoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.InfoHeader {
+  display: flex;
+}
+.InfoHeader h3 {
+  display: inline-block;
+}
+.SickInfo {
+  color: info-sick;
+}
+.DeathsInfo {
+  color: info-deaths;
+  margin-left: 32px;
 }

@@ -13,14 +13,18 @@ import { LiveFeed } from "./views/LiveFeed/LiveFeed";
 import { FactCheck } from "./views/FactCheck/FactCheck";
 import { WhatIf } from "./views/WhatIf/WhatIf";
 import { OnlineDelivery } from "./views/OnlineDelivery/OnlineDelivery";
+import { Travel } from "./views/Travel/Travel";
 
 function App() {
   return (
     <div className={styles.App}>
       <Helmet>
-      <title>Koronawirus w Polsce</title>
+        <title>Koronawirus w Polsce</title>
         <meta charSet="utf-8" />
-        <meta name="description" content="Agregator informacji o koronawirusie w Polsce"/>
+        <meta
+          name="description"
+          content="Agregator informacji o koronawirusie w Polsce"
+        />
         <link rel="canonical" href="https://koronawiruswpl.pl/" />
       </Helmet>
       <Router>
@@ -35,6 +39,9 @@ function App() {
             </Route>
             <Route path="/onlinedelivery">
               <OnlineDelivery />
+            </Route>
+            <Route path="/travel">
+              <Travel />
             </Route>
             <Route exact path="/">
               <LiveFeed />

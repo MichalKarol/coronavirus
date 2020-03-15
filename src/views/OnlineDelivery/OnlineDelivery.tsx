@@ -1,9 +1,31 @@
 import React from "react";
 import styles from "./OnlineDelivery.module.css";
 import { ReactComponent as LinkSVG } from "../../assets/link.svg";
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet";
 
 export function OnlineDelivery() {
+  const food = [
+    { name: "Glovo", url: "https://glovoapp.com/pl" },
+    { name: "Głodny.pl", url: "https://glodny.pl" },
+    { name: "KFC", url: "https://kfc.pl" },
+    { name: "PizzaHut", url: "https://pizzahut.pl" },
+    { name: "PizzaPortal.pl", url: "https://pizzaportal.pl" },
+    { name: "Pyszne.pl", url: "https://pyszne.pl" },
+    { name: "Uber Eats", url: "https://www.ubereats.com/pl" },
+    { name: "Wolt", url: "https://wolt.com/pl" }
+  ];
+
+  const grocery = [
+    { name: "Auchan", url: "https://www.auchandirect.pl" },
+    { name: "Carrefour", url: "https://zakupycodzienne.carrefour.pl" },
+    { name: "Frisco", url: "https://www.frisco.pl" },
+    { name: "Piotr i Paweł", url: "https://www.e-piotripawel.pl" },
+    { name: "Polski koszyk", url: "https://polskikoszyk.pl" },
+    { name: "Szopi", url: "https://app.szopi.pl" },
+    { name: "Tesco", url: "https://ezakupy.tesco.pl" },
+    { name: "Zakupy z dowozem", url: "https://www.zakupyzdowozem.pl" }
+  ];
+
   return (
     <div className={styles.OnlineDelivery}>
       <Helmet>
@@ -19,133 +41,35 @@ export function OnlineDelivery() {
       <div className={styles.OnlineDeliveryGrid}>
         <section>
           <h2 className={styles.GridHeader}>Jedzenie z dowozem</h2>
-          <h3>
-            <a
-              href="https://glovoapp.com/pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Glovo"
-            >
-              Glovo <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://pizzaportal.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Pizzaportal.pl"
-            >
-              Pizzaportal.pl <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://pizzaportal.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Pyszne.pl"
-            >
-              Pyszne.pl <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://www.ubereats.com/pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Uber Eats"
-            >
-              Uber Eats <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
+          {food.map((e, idx) => (
+            <h3 key={idx}>
+              <a
+                href={e.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={e.name}
+              >
+                {e.name}&nbsp;
+                <LinkSVG className={styles.SVGLine} />
+              </a>
+            </h3>
+          ))}
         </section>
         <section>
           <h2 className={styles.GridHeader}>Zakupy z dowozem</h2>
-          <h3>
-            <a
-              href="https://www.auchandirect.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Auchan"
-            >
-              Auchan <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://zakupycodzienne.carrefour.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Carrefour"
-            >
-              Carrefour <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-
-          <h3>
-            <a
-              href="https://www.frisco.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Frisco"
-            >
-              Frisco <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://www.e-piotripawel.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Piotr i Paweł"
-            >
-              Piotr i Paweł <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-
-          <h3>
-            <a
-              href="https://polskikoszyk.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Polski koszyk"
-            >
-              Polski koszyk <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-
-          <h3>
-            <a
-              href="https://app.szopi.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Szopi"
-            >
-              Szopi <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-
-          <h3>
-            <a
-              href="https://ezakupy.tesco.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Tesco"
-            >
-              Tesco <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
-          <h3>
-            <a
-              href="https://www.zakupyzdowozem.pl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Zakupy z dowozem"
-            >
-              Zakupy z dowozem <LinkSVG className={styles.SVGLine} />
-            </a>
-          </h3>
+          {grocery.map((e, idx) => (
+            <h3 key={idx}>
+              <a
+                href={e.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={e.name}
+              >
+                {e.name}&nbsp;
+                <LinkSVG className={styles.SVGLine} />
+              </a>
+            </h3>
+          ))}
         </section>
       </div>
     </div>

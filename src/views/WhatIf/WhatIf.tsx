@@ -85,7 +85,6 @@ export function WhatIf() {
           </b>
         </p>
       </section>
-      <div className={styles.FactCheckGrid}></div>
       Źródła:&nbsp;
       <a
         href="https://www.gov.pl/web/koronawirus/porady"

@@ -21,3 +21,4 @@ yarn-error.log*
 .history
 .mypy_cache
 .env
+__pycache__/*

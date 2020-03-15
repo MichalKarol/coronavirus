@@ -7,7 +7,9 @@ import L from "leaflet";
 // @ts-ignore
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Hostpitals from "../../assets/hospitals.json";
+import Crossings from "../../assets/border-crossings.json";
 import HeartSVG from "../../assets/heart.svg";
+import LogInSVG from "../../assets/log-in.svg";
 import powiaty from "../../assets/powiaty.json";
 import { useTimer } from "../../hooks/use-timer";
 import Helmet from "react-helmet";
@@ -26,6 +28,8 @@ export function LiveFeed() {
         tag: "loaded";
         data: {
           updated: string;
+          sick: number;
+          deaths: number;
           cases: Map<string, Cases>;
         };
       }
@@ -41,7 +45,7 @@ export function LiveFeed() {
         setDataState({
           tag: "loaded",
           data: {
-            updated: res.updated,
+            ...res,
             cases: new Map(res.cases.map((c: Cases) => [c.powiat, c]))
           }
         })
@@ -69,6 +73,11 @@ export function LiveFeed() {
     iconRetinaUrl: HeartSVG,
     iconSize: new L.Point(24, 24)
   });
+  const BORDER_CROSSING_ICON = new L.Icon({
+    iconUrl: LogInSVG,
+    iconRetinaUrl: LogInSVG,
+    iconSize: new L.Point(24, 24)
+  });
   const LEVELS = [
     { min: 1, max: 9, color: "#FFCCCC" },
     { min: 10, max: 24, color: "#FF7F7F" },
@@ -94,7 +103,7 @@ export function LiveFeed() {
           color: level.color,
           opacity: 0.2,
           fillColor: level.color,
-          fillOpacity: 0.5
+          fillOpacity: 0.3
         };
       }
     }
@@ -125,12 +134,26 @@ export function LiveFeed() {
         <link rel="canonical" href="https://koronawiruswpl.pl/" />
       </Helmet>
       <div className={styles.MapContainer}>
-        <h2>
-          Stan na:{" "}
-          {dataState.tag === "loaded"
-            ? formatDate(dataState.data.updated)
-            : " - "}
-        </h2>
+        <div className={styles.MapInfoHeader}>
+          <h2>
+            Stan na:{" "}
+            {dataState.tag === "loaded"
+              ? formatDate(dataState.data.updated)
+              : " - "}
+          </h2>
+          <div className={styles.InfoHeader}>
+            {dataState.tag === "loaded" && (
+              <>
+                <div className={styles.SickInfo}>
+                  Chorzy: <h3>{dataState.data.sick}</h3>
+                </div>
+                <div className={styles.DeathsInfo}>
+                  Zgony: <h3>{dataState.data.deaths}</h3>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
         <LMap
           center={POLAND_CENTER_COORD}
           zoom={7}
@@ -158,19 +181,29 @@ export function LiveFeed() {
               <Popup>{hospital.name}</Popup>
             </Marker>
           ))}
+
+          {Crossings.crossings.map((crossing, idx) => (
+            <Marker
+              position={crossing.coords}
+              key={idx}
+              icon={BORDER_CROSSING_ICON}
+            >
+              <Popup>{crossing.name}</Popup>
+            </Marker>
+          ))}
+
           {popupData && (
             <Popup
               key={`${popupData.lat}${popupData.lng}`}
               position={popupData}
               onPopupClose={() => {
-                console.log("XD");
                 setPopupData(null);
               }}
             >
               <div>
                 <h3>Powiat {popupData.powiat}</h3>
                 <h4>Chorzy: {popupData.sick}</h4>
-                <h4>Śmierci: {popupData.deaths}</h4>
+                <h4>Zgony: {popupData.deaths}</h4>
               </div>
             </Popup>
           )}
