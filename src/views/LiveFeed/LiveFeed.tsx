@@ -15,6 +15,7 @@ import { useTimer } from "../../hooks/use-timer";
 import Helmet from "react-helmet";
 
 type Cases = {
+  wojewodztwo: string;
   powiat: string;
   sick: number;
   deaths: number;
@@ -46,7 +47,9 @@ export function LiveFeed() {
           tag: "loaded",
           data: {
             ...res,
-            cases: new Map(res.cases.map((c: Cases) => [c.powiat, c]))
+            cases: new Map(
+              res.cases.map((c: Cases) => [`${c.powiat}${c.wojewodztwo}`, c])
+            )
           }
         })
       )
@@ -88,7 +91,9 @@ export function LiveFeed() {
 
   function stylePolygons(feature: any) {
     if (dataState.tag === "loaded") {
-      const cases = dataState.data.cases.get(feature.properties.nazwa);
+      const cases = dataState.data.cases.get(
+        `${feature.properties.nazwa}${feature.properties.wojewodztwo}`
+      );
       if (!cases) {
         return {
           color: "darkgrey",
@@ -117,7 +122,9 @@ export function LiveFeed() {
   function onEachFeature(feature: any, layer: any) {
     layer.on("click", function(e: any) {
       if (dataState.tag === "loaded") {
-        const cases = dataState.data.cases.get(feature.properties.nazwa);
+        const cases = dataState.data.cases.get(
+          `${feature.properties.nazwa}${feature.properties.wojewodztwo}`
+        );
         if (cases) {
           setPopupData({ ...cases, ...e.latlng });
         }
