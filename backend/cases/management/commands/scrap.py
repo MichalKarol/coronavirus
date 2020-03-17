@@ -19,17 +19,17 @@ class Command(BaseCommand):
         lines = csv_data.split("\r\n")
 
         cases = []
-        for line in lines[1:-1]:
+        for line in lines:
             parts = line.split(";")
-            if len(parts) == 5:
-                if parts[0] == "Cała Polska":
+            if len(parts) == 4:
+                if parts[0] in ["Cała Polska", "Województwo"]:
                     continue
                 cases.append(
                     Cases(
                         wojewodztwo=parts[0],
-                        powiat=parts[1],
-                        sick=int(parts[2]) if parts[2] else 0,
-                        deaths=int(parts[3]) if parts[3] else 0,
+                        powiat="",
+                        sick=int(parts[1]) if parts[1] else 0,
+                        deaths=int(parts[2]) if parts[2] else 0,
                     )
                 )
         Cases.objects.all().delete()
@@ -43,19 +43,16 @@ class Command(BaseCommand):
             and last_update.date.date() < current_datetime.date()
         ):
             history_cases = []
-            for line in lines[1:-1]:
-                parts = line.split(";")
-                if len(parts) == 5:
-                    if parts[0] == "Cała Polska":
-                        continue
-                    history_cases.append(
-                        HistoryCases(
-                            date=current_datetime,
-                            powiat=parts[1],
-                            sick=int(parts[2]) if parts[2] else 0,
-                            deaths=int(parts[3]) if parts[3] else 0,
-                        )
+            for case in cases:
+                history_cases.append(
+                    HistoryCases(
+                        date=current_datetime,
+                        wojewodztwo=case.wojewodztwo,
+                        powiat=case.powiat,
+                        sick=case.sick,
+                        deaths=case.deaths,
                     )
+                )
             HistoryCases.objects.bulk_create(history_cases)
 
         Updates.objects.create(date=current_datetime)

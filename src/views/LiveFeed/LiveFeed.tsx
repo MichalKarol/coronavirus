@@ -8,9 +8,9 @@ import L from "leaflet";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Hostpitals from "../../assets/hospitals.json";
 import Crossings from "../../assets/border-crossings.json";
-import HeartSVG from "../../assets/heart.svg";
+import PlusSVG from "../../assets/plus.svg";
 import LogInSVG from "../../assets/log-in.svg";
-import powiaty from "../../assets/powiaty.json";
+import wojewodztwa from "../../assets/wojewodztwa.json";
 import { useTimer } from "../../hooks/use-timer";
 import Helmet from "react-helmet";
 
@@ -40,16 +40,14 @@ export function LiveFeed() {
   >(null);
 
   function fetchData() {
-    fetch("https://koronawiruswpl.pl/api/cases")
+    fetch("/api/cases")
       .then(res => res.json())
       .then(res =>
         setDataState({
           tag: "loaded",
           data: {
             ...res,
-            cases: new Map(
-              res.cases.map((c: Cases) => [`${c.powiat}${c.wojewodztwo}`, c])
-            )
+            cases: new Map(res.cases.map((c: Cases) => [c.wojewodztwo, c]))
           }
         })
       )
@@ -72,8 +70,8 @@ export function LiveFeed() {
 
   const POLAND_CENTER_COORD = { lat: 52.1, lng: 19.41667 };
   const HOSPITAL_ICON = new L.Icon({
-    iconUrl: HeartSVG,
-    iconRetinaUrl: HeartSVG,
+    iconUrl: PlusSVG,
+    iconRetinaUrl: PlusSVG,
     iconSize: new L.Point(24, 24)
   });
   const BORDER_CROSSING_ICON = new L.Icon({
@@ -91,9 +89,7 @@ export function LiveFeed() {
 
   function stylePolygons(feature: any) {
     if (dataState.tag === "loaded") {
-      const cases = dataState.data.cases.get(
-        `${feature.properties.nazwa}${feature.properties.wojewodztwo}`
-      );
+      const cases = dataState.data.cases.get(feature.properties.nazwa);
       if (!cases) {
         return {
           color: "darkgrey",
@@ -122,9 +118,7 @@ export function LiveFeed() {
   function onEachFeature(feature: any, layer: any) {
     layer.on("click", function(e: any) {
       if (dataState.tag === "loaded") {
-        const cases = dataState.data.cases.get(
-          `${feature.properties.nazwa}${feature.properties.wojewodztwo}`
-        );
+        const cases = dataState.data.cases.get(feature.properties.nazwa);
         if (cases) {
           setPopupData({ ...cases, ...e.latlng });
         }
@@ -178,7 +172,7 @@ export function LiveFeed() {
           {dataState.tag === "loaded" && (
             <GeoJSON
               key={dataState.data.updated}
-              data={powiaty as any}
+              data={wojewodztwa as any}
               style={stylePolygons}
               onEachFeature={onEachFeature}
             />
@@ -208,7 +202,7 @@ export function LiveFeed() {
               }}
             >
               <div>
-                <h3>Powiat {popupData.powiat}</h3>
+                <h3>Województwo {popupData.wojewodztwo}</h3>
                 <h4>Chorzy: {popupData.sick}</h4>
                 <h4>Zgony: {popupData.deaths}</h4>
               </div>
