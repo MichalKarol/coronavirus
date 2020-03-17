@@ -40,7 +40,7 @@ export function LiveFeed() {
   >(null);
 
   function fetchData() {
-    fetch("/api/cases")
+    fetch("https://koronawiruswpl.pl/api/cases")
       .then(res => res.json())
       .then(res =>
         setDataState({
