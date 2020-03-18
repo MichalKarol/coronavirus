@@ -10,6 +10,10 @@ import Hostpitals from "../../assets/hospitals.json";
 import Crossings from "../../assets/border-crossings.json";
 import PlusSVG from "../../assets/plus.svg";
 import LogInSVG from "../../assets/log-in.svg";
+import { ReactComponent as ReactPlusSVG } from "../../assets/plus.svg";
+import { ReactComponent as ReactLogInSVG } from "../../assets/log-in.svg";
+import { ReactComponent as SquareSVG } from "../../assets/square.svg";
+import { ReactComponent as CheckSquareSVG } from "../../assets/check-square.svg";
 import wojewodztwa from "../../assets/wojewodztwa.json";
 import { useTimer } from "../../hooks/use-timer";
 import Helmet from "react-helmet";
@@ -38,6 +42,9 @@ export function LiveFeed() {
   const [popupData, setPopupData] = useState<
     (Cases & { lat: number; lng: number }) | null
   >(null);
+
+  const [hospitalVisible, setHospitalVisible] = useState(true);
+  const [crossingVisible, setCrossingVisible] = useState(true);
 
   function fetchData() {
     fetch("https://koronawiruswpl.pl/api/cases")
@@ -84,8 +91,12 @@ export function LiveFeed() {
     { min: 10, max: 24, color: "#FF7F7F" },
     { min: 25, max: 49, color: "#FF0000" },
     { min: 50, max: 99, color: "#B20000" },
-    { min: 99, max: Number.POSITIVE_INFINITY, color: "#660000" }
+    { min: 100, max: Number.POSITIVE_INFINITY, color: "#660000" }
   ];
+  function getColorForSick(sick: number) {
+    return (LEVELS.find(i => i.min <= sick && i.max >= sick) || LEVELS[0])
+      .color;
+  }
 
   function stylePolygons(feature: any) {
     if (dataState.tag === "loaded") {
@@ -97,13 +108,16 @@ export function LiveFeed() {
           fill: false
         };
       } else {
-        const level =
-          LEVELS.find(i => i.min <= cases.sick && i.max >= cases.sick) ||
-          LEVELS[0];
+        const levelIdx =
+          LEVELS.findIndex(i => i.min <= cases.sick && i.max >= cases.sick) ||
+          0;
+
         return {
-          color: level.color,
+          color: getColorForSick(cases.sick),
           opacity: 0.2,
-          fillColor: level.color,
+          fillColor: cases.deaths
+            ? `url(#pattern${levelIdx})`
+            : getColorForSick(cases.sick),
           fillOpacity: 0.3
         };
       }
@@ -116,18 +130,57 @@ export function LiveFeed() {
   }
 
   function onEachFeature(feature: any, layer: any) {
-    layer.on("click", function(e: any) {
-      if (dataState.tag === "loaded") {
-        const cases = dataState.data.cases.get(feature.properties.nazwa);
-        if (cases) {
+    if (dataState.tag === "loaded") {
+      const cases = dataState.data.cases.get(feature.properties.nazwa);
+      if (cases) {
+        layer.on("click", function(e: any) {
           setPopupData({ ...cases, ...e.latlng });
-        }
+        });
+        layer.on("mouseout", function(e: any) {
+          // Unset highlight
+          layer.setStyle({ color: getColorForSick(cases.sick), opacity: 0.3 });
+        });
+        layer.on("mouseover", function(e: any) {
+          // Unset highlight
+          console.log("In", e);
+          layer.setStyle({ color: "red", opacity: 0.7 });
+        });
       }
-    });
+    }
   }
 
   return (
     <div className={styles.LiveFeed}>
+      {/* Prepare patterns */}
+      <svg width="100%" height="100%">
+        <defs>
+          {LEVELS.map((l, idx) => (
+            <pattern
+              width="10"
+              height="10"
+              id={`pattern${idx}`}
+              key={idx}
+              patternUnits="userSpaceOnUse"
+            >
+              <rect width="10" height="10" fill={l.color} />
+              <rect
+                width="5"
+                height="5"
+                fill="black"
+                opacity={0.2 + idx * 0.2}
+              />
+              <rect
+                x="5"
+                y="5"
+                width="5"
+                height="5"
+                fill="black"
+                opacity={0.2 + idx * 0.2}
+              />
+            </pattern>
+          ))}
+        </defs>
+      </svg>
       <Helmet>
         <title>Na żywo</title>
         <meta charSet="utf-8" />
@@ -177,21 +230,29 @@ export function LiveFeed() {
               onEachFeature={onEachFeature}
             />
           )}
-          {Hostpitals.hospitalpoints.map((hospital, idx) => (
-            <Marker position={hospital.coords} key={idx} icon={HOSPITAL_ICON}>
-              <Popup>{hospital.name}</Popup>
-            </Marker>
-          ))}
+          {hospitalVisible &&
+            Hostpitals.hospitalpoints.map((hospital, idx) => (
+              <Marker
+                position={hospital.coords}
+                key={idx}
+                icon={HOSPITAL_ICON}
+                bubblingMouseEvents={true}
+              >
+                <Popup>{hospital.name}</Popup>
+              </Marker>
+            ))}
 
-          {Crossings.crossings.map((crossing, idx) => (
-            <Marker
-              position={crossing.coords}
-              key={idx}
-              icon={BORDER_CROSSING_ICON}
-            >
-              <Popup>{crossing.name}</Popup>
-            </Marker>
-          ))}
+          {crossingVisible &&
+            Crossings.crossings.map((crossing, idx) => (
+              <Marker
+                position={crossing.coords}
+                key={idx}
+                icon={BORDER_CROSSING_ICON}
+                bubblingMouseEvents={true}
+              >
+                <Popup>{crossing.name}</Popup>
+              </Marker>
+            ))}
 
           {popupData && (
             <Popup
@@ -209,6 +270,47 @@ export function LiveFeed() {
             </Popup>
           )}
         </LMap>
+        <div className={styles.Legend}>
+          <div className={styles.MarginGroup}>
+            Źródło:&nbsp;
+            <a
+              href="https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="gov.pl"
+            >
+              gov.pl
+            </a>
+          </div>
+          <div className={styles.MarginGroup}>
+            <ReactPlusSVG />
+            <button
+              onClick={() => setHospitalVisible(s => !s)}
+              className={styles.CheckboxButton}
+            >
+              {hospitalVisible ? <CheckSquareSVG /> : <SquareSVG />}
+            </button>
+          </div>
+          <div className={styles.MarginGroup}>
+            <ReactLogInSVG />
+            <button
+              onClick={() => setCrossingVisible(s => !s)}
+              className={styles.CheckboxButton}
+            >
+              {crossingVisible ? <CheckSquareSVG /> : <SquareSVG />}
+            </button>
+          </div>
+          <div className={styles.MarginGroup}>
+            Skala:&nbsp;
+            {LEVELS.map(l => (
+              <div className={styles.MarginGroup}>
+                <SquareSVG color={l.color} fill={l.color} />
+                {l.min}
+                {l.max === Number.POSITIVE_INFINITY ? "+" : ` do ${l.max}`}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className={styles.TwitterContainer}>
         <div className={styles.TwitterContainerLoading}>Loading</div>

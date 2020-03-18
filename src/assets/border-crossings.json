@@ -50,7 +50,7 @@
       "coords": { "lat": 52.3478996, "lng": 14.5531874 }
     },
     {
-      "name": "Przejście graniczne Kostrzyn nad Odrą – Kietz (pieszy)",
+      "name": "Przejście graniczne Kostrzyn nad Odrą – Kietz",
       "coords": { "lat": 52.5838763, "lng": 14.6274919 }
     },
     {
@@ -66,7 +66,7 @@
       "coords": { "lat": 53.8911776, "lng": 14.2108186 }
     },
     {
-      "name": "Przejście graniczne Zgorzelec (pieszy)",
+      "name": "Przejście graniczne Zgorzelec",
       "coords": { "lat": 51.1516134, "lng": 15.0004736 }
     },
     {
@@ -120,6 +120,22 @@
     {
       "name": "Przejście graniczne Krościenko - Smolnica",
       "coords": { "lat": 49.4737372, "lng": 22.6591048 }
+    },
+    {
+      "name": "Przejście graniczne Gołkowice - Závada",
+      "coords": { "lat": 49.9027086, "lng": 18.5069224 }
+    },
+    {
+      "name": "Przejście graniczne Lubawka - Královec",
+      "coords": { "lat": 50.6986256, "lng": 15.9714649 }
+    },
+    {
+      "name": "Przejście graniczne Głuchołazy - Mikulovice",
+      "coords": { "lat": 50.3315506, "lng": 17.2983161 }
+    },
+    {
+      "name": "Przejście graniczne Ogrodniki",
+      "coords": { "lat": 54.161183, "lng": 23.4716042 }
     }
   ]
 }

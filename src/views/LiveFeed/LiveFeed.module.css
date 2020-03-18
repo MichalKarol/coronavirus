@@ -67,3 +67,20 @@
   color: info-deaths;
   margin-left: 32px;
 }
+.Legend {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  flex-wrap: wrap;
+}
+.CheckboxButton {
+  color: white;
+  background: none;
+  border: none;
+}
+.MarginGroup {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

@@ -53,6 +53,9 @@ export function Travel() {
               <li>Trzebina</li>
               <li>Kudowa – Słone</li>
               <li>Jakuszyce</li>
+              <li>Gołkowice - Závada</li>
+              <li>Lubawka - Královec</li>
+              <li>Głuchołazy - Mikulovice</li>
             </ul>
           </li>
 
@@ -64,17 +67,18 @@ export function Travel() {
               <li>Gubin – Guben</li>
               <li>Świecko – Frankfurt</li>
               <li>Słubice – Frankfurt</li>
-              <li>Kostrzyn nad Odrą – Kietz (pieszy)</li>
+              <li>Kostrzyn nad Odrą – Kietz</li>
               <li>Krajnik Dolny – Schwedt</li>
               <li>Kołbaskowo – Pomellen</li>
               <li>Świnoujście – Garz</li>
-              <li>Zgorzelec (pieszy)</li>
+              <li>Zgorzelec</li>
             </ul>
           </li>
           <li>
             Z Litwą
             <ul>
               <li>Budzisko</li>
+              <li>Ogrodniki</li>
             </ul>
           </li>
           <li>
