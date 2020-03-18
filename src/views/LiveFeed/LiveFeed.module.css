@@ -12,7 +12,7 @@
 @media only screen and (max-width: max-mobile) {
   .LiveFeed {
     grid-template-columns: auto;
-    grid-template-rows: auto 90vmin;
+    grid-template-rows: auto auto;
     row-gap: 16px;
     grid-template-areas:
       "twitter"
@@ -29,6 +29,12 @@
 .MapElement {
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: max-mobile) {
+  .MapElement {
+    width: 90vmin;
+    height: 90vmin;
+  }
 }
 
 .TwitterContainer {
