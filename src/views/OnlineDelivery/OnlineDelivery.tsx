@@ -49,7 +49,7 @@ export function OnlineDelivery() {
                 rel="noopener noreferrer"
                 aria-label={e.name}
               >
-                {e.name}&nbsp;
+                <span className={styles.LinkWithIcon}>{e.name}</span>
                 <LinkSVG className={styles.SVGLine} />
               </a>
             </h3>
@@ -65,7 +65,7 @@ export function OnlineDelivery() {
                 rel="noopener noreferrer"
                 aria-label={e.name}
               >
-                {e.name}&nbsp;
+                <span className={styles.LinkWithIcon}>{e.name}</span>
                 <LinkSVG className={styles.SVGLine} />
               </a>
             </h3>

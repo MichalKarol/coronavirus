@@ -16,7 +16,7 @@ export function Travel() {
       </Helmet>
       <h1>Poza granicami</h1>
       <section className={styles.Section}>
-        <h2>Akcja #LotDoDomu</h2>
+        <h2 className={styles.SectionTitle}>Akcja #LotDoDomu</h2>
         Zgłoś zapotrzebowanie na lot do Polski:
         <h4>
           <a
@@ -30,7 +30,9 @@ export function Travel() {
         </h4>
       </section>
       <section className={styles.Section}>
-        <h2>Infolinia MSZ dot. możliwości przekraczania granic</h2>
+        <h2 className={styles.SectionTitle}>
+          Infolinia MSZ dot. możliwości przekraczania granic
+        </h2>
         <p>
           MSZ:&nbsp;
           <b>
@@ -39,7 +41,7 @@ export function Travel() {
         </p>
       </section>
       <section className={styles.Section}>
-        <h2>
+        <h2 className={styles.SectionTitle}>
           Gdzie przekraczać granicę? - drogowe i piesze przejścia graniczne
         </h2>
         <ul>
@@ -119,7 +121,7 @@ export function Travel() {
         </ul>
       </section>
       <section className={styles.Section}>
-        <h2>Ograniczenia wjazdu</h2>
+        <h2 className={styles.SectionTitle}>Ograniczenia wjazdu</h2>
         Na przejściach granicznych – zarówno na granicy wewnętrznej, jak i
         zewnętrznej – przy wjeździe do Polski wprowadzane zostają ograniczenia
         dla cudzoziemców.
@@ -166,7 +168,7 @@ export function Travel() {
         </ul>
       </section>
       <section className={styles.Section}>
-        <h2>Kogo dotyczy kwarantanna?</h2>
+        <h2 className={styles.SectionTitle}>Kogo dotyczy kwarantanna?</h2>
         Wszyscy przyjeżdżający do Polski zostaną poddani kontroli sanitarnej i
         zarejestrowani. Zgodnie z rozporządzeniem Ministra Zdrowia w sprawie
         ogłoszenia na obszarze Rzeczypospolitej Polskiej zostaną także

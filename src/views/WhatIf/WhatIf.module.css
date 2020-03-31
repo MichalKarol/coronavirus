@@ -6,3 +6,15 @@
   padding: 16px;
   background-color: light-background;
 }
+
+.SectionTitle {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px white solid;
+}
+
+.SVGLine {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 4px;
+}

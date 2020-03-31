@@ -90,3 +90,8 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.LineStyle {
+  stroke: black;
+  stroke-width: 2;
+}

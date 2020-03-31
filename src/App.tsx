@@ -14,6 +14,7 @@ import { FactCheck } from "./views/FactCheck/FactCheck";
 import { WhatIf } from "./views/WhatIf/WhatIf";
 import { OnlineDelivery } from "./views/OnlineDelivery/OnlineDelivery";
 import { Travel } from "./views/Travel/Travel";
+import { HelpLocally } from './views/HelpLocally/HelpLocally';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
             </Route>
             <Route path="/travel">
               <Travel />
+            </Route>
+            <Route path="/helplocally">
+              <HelpLocally />
             </Route>
             <Route exact path="/">
               <LiveFeed />

@@ -13,6 +13,11 @@ export function Header() {
       mobileName: "Co jeśli?",
       url: "/whatif"
     },
+    {
+      name: "Pomoc lokalnie",
+      mobileName: "Pomoc lokalnie",
+      url: "/helplocally"
+    },
     { name: "Poza granicami", mobileName: "Poza granicami", url: "/travel" },
     { name: "Fakty i mity", mobileName: "Fakty i mity", url: "/factcheck" },
     {

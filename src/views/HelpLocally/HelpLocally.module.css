@@ -1,0 +1,75 @@
+@value colors: "../../colors.css";
+@value light-background, base-background from colors;
+
+@value breakpoints: "../../breakpoints.css";
+@value max-mobile from breakpoints;
+
+.Section {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: light-background;
+}
+
+.SectionTitle {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px white solid;
+}
+
+.LinkWithIcon {
+  padding-right: 16px;
+}
+
+.SVGLine {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 4px;
+}
+
+.Selector {
+  margin-bottom: 32px;
+}
+
+.TodaySpecial {
+  composes: Section;
+}
+
+.Apps {
+  composes: Section;
+}
+
+.Groups {
+  composes: Section;
+}
+
+.Gastronomy {
+  composes: Section;
+}
+
+.GridRow {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.GridRowHeader {
+  composes: GridRow;
+  border-bottom: 1px solid #98a1a4;
+}
+
+@media only screen and (max-width: max-mobile) {
+  .GridRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #98a1a4;
+  }
+}
+
+@media only screen and (max-width: max-mobile) {
+  .NonBreakable {
+    display: block;
+  }
+}

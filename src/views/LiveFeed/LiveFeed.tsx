@@ -118,7 +118,7 @@ export function LiveFeed() {
           fillColor: cases.deaths
             ? `url(#pattern${levelIdx})`
             : getColorForSick(cases.sick),
-          fillOpacity: 0.3
+          fillOpacity: cases.deaths ? 1 : 0.3
         };
       }
     }
@@ -142,7 +142,6 @@ export function LiveFeed() {
         });
         layer.on("mouseover", function(e: any) {
           // Unset highlight
-          console.log("In", e);
           layer.setStyle({ color: "red", opacity: 0.7 });
         });
       }
@@ -156,27 +155,14 @@ export function LiveFeed() {
         <defs>
           {LEVELS.map((l, idx) => (
             <pattern
-              width="10"
-              height="10"
+              width="20"
+              height="20"
               id={`pattern${idx}`}
               key={idx}
               patternUnits="userSpaceOnUse"
             >
-              <rect width="10" height="10" fill={l.color} />
-              <rect
-                width="5"
-                height="5"
-                fill="black"
-                opacity={0.2 + idx * 0.2}
-              />
-              <rect
-                x="5"
-                y="5"
-                width="5"
-                height="5"
-                fill="black"
-                opacity={0.2 + idx * 0.2}
-              />
+              <rect width="20" height="20" fill={l.color} opacity={0.3} />
+              <line x1="0" y1="0" x2="0" y2="20" className={styles.LineStyle} />
             </pattern>
           ))}
         </defs>
