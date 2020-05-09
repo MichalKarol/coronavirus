@@ -11,8 +11,7 @@ export function Header() {
     {
       name: "Co jeśli mam koronawirusa",
       mobileName: "Co jeśli?",
-      url:
-        "https://www.gov.pl/web/koronawirus/podejrzewasz-u-siebie-koronawirusa",
+      url: "/whatif",
     },
     {
       name: "Pomoc lokalnie",
