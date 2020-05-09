@@ -11,27 +11,28 @@ export function Header() {
     {
       name: "Co jeśli mam koronawirusa",
       mobileName: "Co jeśli?",
-      url: "/whatif"
+      url:
+        "https://www.gov.pl/web/koronawirus/podejrzewasz-u-siebie-koronawirusa",
     },
     {
       name: "Pomoc lokalnie",
       mobileName: "Pomoc lokalnie",
-      url: "/helplocally"
+      url: "/helplocally",
     },
     { name: "Poza granicami", mobileName: "Poza granicami", url: "/travel" },
     { name: "Fakty i mity", mobileName: "Fakty i mity", url: "/factcheck" },
     {
       name: "Zakupy i jedzenie na dowóz",
       mobileName: "Dowóz",
-      url: "/onlinedelivery"
-    }
+      url: "/onlinedelivery",
+    },
   ];
 
   return (
     <header className={styles.Header}>
       <div className={styles.MobileHeader}>
         <nav className={styles.links}>
-          {links.slice(0, 3).map(link => (
+          {links.slice(0, 3).map((link) => (
             <NavLink
               key={link.url}
               to={link.url}
@@ -46,13 +47,13 @@ export function Header() {
           ))}
           <button
             className={styles.MobileMenuButton}
-            onClick={() => setMenuOpen(s => !s)}
+            onClick={() => setMenuOpen((s) => !s)}
           >
             <MenuSVG />
           </button>
           {isMenuOpen && (
             <div className={styles.MobileMenu}>
-              {links.slice(3, links.length).map(link => (
+              {links.slice(3, links.length).map((link) => (
                 <NavLink
                   key={link.url}
                   to={link.url}
@@ -71,7 +72,7 @@ export function Header() {
       </div>
       <div className={styles.StandardHeader}>
         <nav className={styles.links}>
-          {links.map(link => (
+          {links.map((link) => (
             <NavLink
               key={link.url}
               to={link.url}

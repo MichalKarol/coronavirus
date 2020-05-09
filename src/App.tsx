@@ -5,16 +5,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
+  RouteComponentProps,
 } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { LiveFeed } from "./views/LiveFeed/LiveFeed";
 import { FactCheck } from "./views/FactCheck/FactCheck";
-import { WhatIf } from "./views/WhatIf/WhatIf";
 import { OnlineDelivery } from "./views/OnlineDelivery/OnlineDelivery";
 import { Travel } from "./views/Travel/Travel";
-import { HelpLocally } from './views/HelpLocally/HelpLocally';
+import { HelpLocally } from "./views/HelpLocally/HelpLocally";
 
 function App() {
   return (
@@ -35,9 +35,17 @@ function App() {
             <Route path="/factcheck">
               <FactCheck />
             </Route>
-            <Route path="/whatif">
-              <WhatIf />
-            </Route>
+            <Route
+              path="/whatif"
+              render={(props: RouteComponentProps<any>) => {
+                window.open(
+                  "https://www.gov.pl/web/koronawirus/podejrzewasz-u-siebie-koronawirusa",
+                  "_blank",
+                  "noreferrer noopener"
+                );
+                return <Redirect to="/" />;
+              }}
+            />
             <Route path="/onlinedelivery">
               <OnlineDelivery />
             </Route>

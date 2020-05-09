@@ -28,8 +28,8 @@ class Command(BaseCommand):
                     Cases(
                         wojewodztwo=parts[0],
                         powiat="",
-                        sick=int(parts[1]) if parts[1] else 0,
-                        deaths=int(parts[2]) if parts[2] else 0,
+                        sick=int(parts[1].replace(" ", "")) if parts[1] else 0,
+                        deaths=int(parts[2].replace(" ", "")) if parts[2] else 0,
                     )
                 )
         Cases.objects.all().delete()
